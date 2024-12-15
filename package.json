@@ -1,0 +1,23 @@
+{
+  "name": "food-app",
+  "version": "1.0.0",
+  "description": "A demo Food Ordering App",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eshwar-B/demo-food-ordering-app.git"
+  },
+  "keywords": [
+    "react",
+    "project"
+  ],
+  "author": "Eshwar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eshwar-B/demo-food-ordering-app/issues"
+  },
+  "homepage": "https://github.com/Eshwar-B/demo-food-ordering-app#readme"
+}
