@@ -17,10 +17,15 @@ const Body = () => {
 
   const fetchData = async () => {
     try {
-      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.406498&lng=78.47724389999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-      const jsonData = await data.json();
-      setRestaurantsList(jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
-      setFilteredRestaurants(jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+      const hyderabadData = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.406498&lng=78.47724389999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const bangloreData = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+      const mumbaiData = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const hydJsonData = await hyderabadData.json();
+      const bnglrJsonData = await bangloreData.json();
+      const mbJsonData = await mumbaiData.json();
+      const mergedData = [...hydJsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants, ...bnglrJsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants, ...mbJsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants];
+      setRestaurantsList(mergedData);
+      setFilteredRestaurants(mergedData);
     } catch (error) {
       console.log("error occurred while fetching data ", error);
       setRestaurantsList([]);
@@ -85,7 +90,7 @@ const Body = () => {
 
               {/* check if the food item is delivered within 40 mins */}
               {
-                res?.info?.sla?.deliveryTime < 40 
+                res?.info?.sla?.deliveryTime < 30 
                 ? <QuicklyServedCard  resData={res} /> 
                 : <Restaurantcard resData={res} />
               }

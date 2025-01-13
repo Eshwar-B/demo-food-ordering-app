@@ -3,7 +3,7 @@ import { CLOUDINARY_IMAGE_URL } from "../utils/constants";
 const Restaurantcard = (props) => {
     // console.log("Restaurant Data:", props); // Log the restaurant data
     return (
-      <div className="m-4 p-4 w-[250px] rounded-lg " style={{backgroundColor: "#C9E4CA"}}>
+      <div className="m-4 p-4 w-[250px] rounded-lg hover:scale-105 transition-transform duration-300 " style={{backgroundColor: "#C9E4CA"}}>
         <img className=" mb-4 rounded-lg h-[250px]" src= {`${CLOUDINARY_IMAGE_URL}${props?.resData?.info?.cloudinaryImageId}`}  alt="No Internet" />
         <h3 className="font-bold text-xl">{props?.resData?.info?.name}</h3>
         <h4 className="">{props?.resData?.info?.cuisines.join(", ")}</h4>
@@ -22,8 +22,8 @@ const Restaurantcard = (props) => {
       return (props) => {
         
          return (
-          <div>
-            <label className="text-white absolute bg-black m-2 p-2 rounded-lg"> Quickly Served </label>
+          <div className="relative hover:scale-105 transition-transform duration-300 transform-origin-top-left">
+            <label className="text-white absolute bg-black m-2 p-2 rounded-lg z-10"> Quickly Served </label>
             <RestaurantCard {...props}/>
           </div>
          )

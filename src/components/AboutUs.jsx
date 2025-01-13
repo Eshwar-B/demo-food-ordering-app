@@ -1,5 +1,5 @@
 import UserFunctionalComponent from "./user"; // Functional component
-import UserClassComponent from "./userClass"; // Class component
+
 
 const AboutUS = () => {
     return (
@@ -9,9 +9,7 @@ const AboutUS = () => {
             <div className="user">
                 <UserFunctionalComponent name="Eshwar" location="Hyderabad" type="Functional Based Component"/>
             </div>
-            <div className="user">
-                <UserClassComponent names="Eshwar" location="Hyderabad" type="Class Based Component"/>
-            </div>
+            
 
             <h3>Some Random stuff</h3>
 
