@@ -103,7 +103,7 @@ const Body = () => {
         </div>
 
         {/* Restaurant cards container */}
-        <div className="res-container flex flex-wrap gap-3 p-4">
+        <div className="res-container flex flex-wrap justify-between p-4 ">
           {filteredRestaurants.map((res) => (
             <Link key={res.info.id} to={"/restaurants/" + res.info.id}>
               {/* Check if the food item is delivered within 40 mins */}
