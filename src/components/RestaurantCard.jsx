@@ -1,6 +1,8 @@
 import { CLOUDINARY_IMAGE_URL } from "../utils/constants";
 
+
 const Restaurantcard = (props) => {
+
     // console.log("Restaurant Data:", props); // Log the restaurant data
     return (
       <div className="m-4 p-4 w-[250px] rounded-lg hover:scale-105 transition-transform duration-300 " style={{backgroundColor: "#C9E4CA"}}>

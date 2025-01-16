@@ -3,10 +3,8 @@ import ItemList from "./itemList";
 
 const RestaurantCategory = (props) => {
 
-    const [showItems, setShowItems] = useState(false);
-
     const handleClick = () => {
-        setShowItems(!showItems);
+        props.openIndex();
         console.log("Accordion Clicked")
     };
     
@@ -19,7 +17,7 @@ const RestaurantCategory = (props) => {
                     <span>⛛</span>
                     {/* Accordian Body */}
                 </div>
-                { showItems  && <ItemList items={props?.data?.itemCards} /> }
+                { props?.showItems  && <ItemList items={props?.data?.itemCards} /> }
             </div>
 
             
