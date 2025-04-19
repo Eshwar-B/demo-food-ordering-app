@@ -5,6 +5,8 @@ click on a Restaurant card to check its menu items.
 Add the items to the cart.
 
 
+****
+This Web Application displays the cards data from live API of official Swiggy website.
 
 
 # React + Vite
