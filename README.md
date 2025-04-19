@@ -1,6 +1,6 @@
 This is the Deployment URL: https://find-restaurant-mauve.vercel.app/
 
-****Imp note: Make sure you enable CORS extension installed and enabled, else the cards could not be displayed.
+****Imp note: Make sure you enable CORS extension installed and enabled in your chrome browser, else the cards could not be displayed.
 click on a Restaurant card to check its menu items. 
 Add the items to the cart.
 
